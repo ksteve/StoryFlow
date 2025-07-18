@@ -13,6 +13,10 @@
         --font: 'Inter', sans-serif;
       }
 
+      html {
+        scroll-behavior: smooth;
+      }
+
       * {
         margin: 0;
         padding: 0;
@@ -23,16 +27,17 @@
         background-color: var(--bg);
         color: var(--text);
         font-family: var(--font);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 100vh;
-        padding: 2rem;
+        line-height: 1.6;
       }
 
-      .container {
+      .hero {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
         text-align: center;
-        max-width: 800px;
       }
 
       h1 {
@@ -65,23 +70,45 @@
         box-shadow: 0 4px 20px rgba(0, 255, 204, 0.3);
       }
 
+      .section {
+        padding: 6rem 2rem;
+        text-align: center;
+        background-color: #111111;
+      }
+
+      .section h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      .section p {
+        color: #999;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
       footer {
-        position: absolute;
-        bottom: 2rem;
+        text-align: center;
+        padding: 2rem;
         font-size: 0.8rem;
         color: #666;
       }
     </style>
   </head>
   <body>
-    <div class="container">
+    <section class="hero">
       <h1>Hello, I’m Your Name</h1>
       <p>Creating elegant solutions with clean design and minimal code.</p>
       <a href="#work" class="button">View My Work</a>
-    </div>
+    </section>
+
+    <section id="work" class="section">
+      <h2>My Work</h2>
+      <p>Here’s a showcase of my latest projects, blending usability and aesthetics.</p>
+    </section>
+
     <footer>
       © 2025 Your Name
     </footer>
   </body>
 </html>
-
