@@ -93,6 +93,62 @@
         font-size: 0.8rem;
         color: #666;
       }
+
+      .timeline-container {
+        background-color: #0d0d0d;
+        color: #fff;
+        padding: 4rem 2rem;
+        text-align: center;
+      }
+
+      .timeline-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      .timeline {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        position: relative;
+        max-width: 100%;
+        margin: 0 auto;
+        padding-top: 2rem;
+      }
+      
+      .timeline::before {
+        content: '';
+        position: absolute;
+        top: 40px;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: #333;
+        z-index: 0;
+      }
+      
+      .timeline-item {
+        position: relative;
+        text-align: center;
+        width: 30%;
+      }
+      
+      .dot {
+        width: 20px;
+        height: 20px;
+        background: #00ffcc;
+        border-radius: 50%;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+      }
+      
+      .content {
+        margin-top: 1rem;
+        font-size: 0.95rem;
+        color: #bbb;
+      }
+
     </style>
   </head>
   <body>
@@ -106,6 +162,35 @@
       <h2>My Work</h2>
       <p>Here’s a showcase of my latest projects, blending usability and aesthetics.</p>
     </section>
+
+      <section class="timeline-container">
+    <h1 class="timeline-title">News Timeline</h1>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="dot"></div>
+        <div class="content">
+          <h3>July 24, 2023</h3>
+          <p>Twitter officially rebrands to X.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="dot"></div>
+        <div class="content">
+          <h3>July 25, 2023</h3>
+          <p>New X logo goes live worldwide.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="dot"></div>
+        <div class="content">
+          <h3>Aug 01, 2023</h3>
+          <p>First user backlash over new branding trends.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
     <footer>
       © 2025 Your Name
