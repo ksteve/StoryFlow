@@ -18,8 +18,6 @@ COUNTRY = "us"  # You can change to 'gb', 'in', etc.
 
 def fetch_top_headlines():
     top_headlines = newsapi.get_top_headlines(
-        q=TOPIC,
-        country=COUNTRY,
         category=None,     # Optionally: 'technology', 'business', etc.
         page_size=20,
     )
