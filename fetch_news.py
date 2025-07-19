@@ -14,17 +14,18 @@ db = firestore.client()
 # --- Setup NewsAPI ---
 newsapi = NewsApiClient(api_key=os.environ["NEWSAPI_KEY"])
 TOPIC = "technology"
+COUNTRY = "us"  # You can change to 'gb', 'in', etc.
 
-def fetch_articles():
-    all_articles = newsapi.get_everything(
+def fetch_top_headlines():
+    top_headlines = newsapi.get_top_headlines(
         q=TOPIC,
-        language="en",
-        sort_by="publishedAt",
+        country=COUNTRY,
+        category=None,     # Optionally: 'technology', 'business', etc.
         page_size=20,
     )
 
     stored = 0
-    for article in all_articles.get("articles", []):
+    for article in top_headlines.get("articles", []):
         url = article["url"]
 
         # Check for duplicates
@@ -48,7 +49,7 @@ def fetch_articles():
         db.collection("articles").add(doc)
         stored += 1
 
-    print(f"✅ Stored {stored} new articles.")
+    print(f"✅ Stored {stored} new top headlines.")
 
 if __name__ == "__main__":
-    fetch_articles()
+    fetch_top_headlines()
