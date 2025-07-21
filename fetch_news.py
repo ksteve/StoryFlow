@@ -39,7 +39,6 @@ def fetch_top_headlines():
             "source": article["source"]["name"],
             "publishedAt": article["publishedAt"],
             "fetchedAt": datetime.utcnow().isoformat() + "Z",
-            "topic": TOPIC,
             "clustered": False,
             "clusterId": None,
         }
