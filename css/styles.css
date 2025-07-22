@@ -102,9 +102,9 @@ footer {
   display: flex;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  gap: 2rem;
   padding: 2rem 1rem;
-  position: relative;
+  gap: 2rem;
+  justify-content: start;
 }
 
 .timeline::-webkit-scrollbar {
@@ -117,11 +117,10 @@ footer {
 }
 
 .timeline-item {
-  flex: 0 0 auto;
+  flex: 0 0 calc(33.333% - 2rem); /* 3 items per full width minus gap */
   scroll-snap-align: start;
-  width: 240px;
-  position: relative;
   text-align: center;
+  position: relative;
 }
 
 .dot {
