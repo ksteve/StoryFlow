@@ -1,0 +1,19 @@
+[
+  {
+    "id": "timeline1",
+    "title": "Twitter Rebrand",
+    "events": [
+      { "date": "2023-07-24", "summary": "Twitter officially rebrands to X." },
+      { "date": "2023-07-25", "summary": "New X logo goes live worldwide." },
+      { "date": "2023-08-01", "summary": "First user backlash over new branding." }
+    ]
+  },
+  {
+    "id": "timeline2",
+    "title": "Another Timeline",
+    "events": [
+      { "date": "2023-08-10", "summary": "Example event A." },
+      { "date": "2023-08-12", "summary": "Example event B." }
+    ]
+  }
+]
