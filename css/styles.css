@@ -100,12 +100,43 @@ footer {
 
 .timeline {
   display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 2rem;
+  padding: 2rem 1rem;
   position: relative;
-  max-width: 100%;
+}
+
+.timeline::-webkit-scrollbar {
+  height: 8px;
+}
+
+.timeline::-webkit-scrollbar-thumb {
+  background-color: #333;
+  border-radius: 4px;
+}
+
+.timeline-item {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  width: 240px;
+  position: relative;
+  text-align: center;
+}
+
+.dot {
+  width: 20px;
+  height: 20px;
+  background: var(--accent);
+  border-radius: 50%;
   margin: 0 auto;
-  padding-top: 2rem;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.2s ease;
+}
+
+.dot:hover {
+  transform: scale(1.4);
 }
 
 .timeline::before {
@@ -113,26 +144,10 @@ footer {
   position: absolute;
   top: 40px;
   left: 0;
-  right: 0;
+  width: 100%;
   height: 2px;
   background: #333;
   z-index: 0;
-}
-
-.timeline-item {
-  position: relative;
-  text-align: center;
-  width: 30%;
-}
-
-.dot {
-  width: 20px;
-  height: 20px;
-  background: #00ffcc;
-  border-radius: 50%;
-  margin: 0 auto;
-  position: relative;
-  z-index: 1;
 }
 
 .content {
